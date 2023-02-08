@@ -1,0 +1,4 @@
+{
+  "plugins": ["@babel/plugin-external-helpers", "../../../src", "@babel/plugin-transform-react-inline-elements"],
+  "presets": ["@babel/preset-react"]
+}

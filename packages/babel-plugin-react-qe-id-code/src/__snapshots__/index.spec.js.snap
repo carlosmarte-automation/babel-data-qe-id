@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component code root + sub components 1`] = `
+{
+  "code": "function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+var React = require("react");
+var H1 = function H1(_ref) {
+  var children = _ref.children,
+    qeid = _ref.qeid;
+  return React.createElement("h1", {
+    "data-qeid": qeid
+  }, children);
+};
+var Header = function Header(_ref2) {
+  var qeid = _ref2.qeid,
+    children = _ref2.children;
+  return React.createElement("header", {
+    "data-qeid": qeid
+  }, React.createElement(H1, {
+    qeid: "e150b042a433f31596fd9c059b8856715b162dd1"
+  }, "sub heading"), children);
+};
+module.exports = function (props) {
+  return React.createElement(Header, _extends({}, props, {
+    qeid: "892548d640765de8dbaf4be7783e2a373875cf1b"
+  }));
+};",
+  "componentJson": <header
+    data-qeid="892548d640765de8dbaf4be7783e2a373875cf1b"
+  >
+    <h1
+      data-qeid="e150b042a433f31596fd9c059b8856715b162dd1"
+    >
+      sub heading
+    </h1>
+  </header>,
+  "sourceCode": "const React = require("react");
+
+const H1 = ({ children, qeid }) => <h1 data-qeid={qeid}>{children}</h1>;
+
+const Header = ({ qeid, children }) => (
+  <header data-qeid={qeid}>
+    <H1>sub heading</H1>
+    {children}
+  </header>
+);
+
+module.exports = (props) => <Header {...props} />;
+",
+}
+`;
+
+exports[`component code root component 1`] = `
+{
+  "code": "function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+var React = require("react");
+var Header = function Header(_ref) {
+  var children = _ref.children,
+    qeid = _ref.qeid;
+  return React.createElement("header", {
+    "data-qeid": qeid
+  }, React.createElement("label", {
+    "for": "test",
+    "class": "test"
+  }, "Test"), children);
+};
+module.exports = function (props) {
+  return React.createElement(Header, _extends({}, props, {
+    qeid: "14272b5fb949014245dfb99bbdbfb34535e99348"
+  }));
+};",
+  "componentJson": <header
+    data-qeid="14272b5fb949014245dfb99bbdbfb34535e99348"
+  >
+    <label
+      class="test"
+      for="test"
+    >
+      Test
+    </label>
+  </header>,
+  "sourceCode": "const React = require("react");
+
+const Header = ({ children, qeid }) => (
+  <header data-qeid={qeid}>
+    <label for="test" class="test">
+      Test
+    </label>
+    {children}
+  </header>
+);
+
+module.exports = (props) => <Header {...props} />;
+",
+}
+`;

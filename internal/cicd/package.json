@@ -1,0 +1,14 @@
+{
+  "name": "cicd",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "css-transform.mjs",
+    "file-transform.mjs",
+    "generate-index.js",
+    "generate-pkg-types.js",
+    "jest-babel-transform.js",
+    "jest-setup-standard.js",
+    "react-file-transform.js"
+  ]
+}
